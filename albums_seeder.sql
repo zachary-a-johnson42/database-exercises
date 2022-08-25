@@ -1,3 +1,6 @@
+--Put truncate up top to get rid of the double entries we made
+TRUNCATE albums;
+--Seeding
 INSERT INTO albums(artist_name, album_name, release_date, genre, sales)
 VALUES ('Michael Jackson', 'Thriller', 1982, 'Pop', 50.2 * 1000000),
        ('AC/DC', 'Back In Black', 1980, 'Hard Rock', 30.1 * 1000000),
