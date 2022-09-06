@@ -24,7 +24,7 @@ WHERE dm.to_date = '9999-01-01' AND gender = 'F'
 SELECT title, COUNT(title) AS total FROM dept_emp AS dept_emp
     JOIN titles ON dept_emp.emp_no = titles.emp_no
     JOIN departments ON dept_emp.dept_no = departments.dept_no
-    WHERE dept_emp.dept_no = 'd009'
+    WHERE dept_emp.dept_no = 'd009' AND dept_emp.to_date = '9999-01-01'
     GROUP BY title
     ORDER BY title
 
@@ -37,4 +37,4 @@ SELECT DISTINCT d.dept_name AS department, CONCAT(e.first_name, ' ', e.last_name
               ON d.dept_no = dm.dept_no
         JOIN salaries AS sal
             ON sal.emp_no = dm.emp_no
-    WHERE dm.to_date = '9999-01-01'
+    WHERE dm.to_date = '9999-01-01' AND sal.to_date = '9999-01-01'
